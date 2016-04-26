@@ -1,16 +1,16 @@
 package model;
 
-public class Customer {
+public class CustomerVO {
 	private String id;
 	private String password;
 	private String email;
 	private String phone;
 	
-	public Customer() {
+	public CustomerVO() {
 		super();
 	}
 
-	public Customer(String id, String password, String email, String phone) {
+	public CustomerVO(String id, String password, String email, String phone) {
 		super();
 		this.id = id;
 		this.password = password;
@@ -55,6 +55,4 @@ public class Customer {
 		return "Customer [id=" + id + ", password=" + password + ", email="
 				+ email + ", phone=" + phone + "]";
 	}
-	
-	
 }

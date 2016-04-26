@@ -55,6 +55,4 @@ public class CustomerVO {
 		return "Customer [id=" + id + ", password=" + password + ", email="
 				+ email + ", phone=" + phone + "]";
 	}
-	
-	
 }

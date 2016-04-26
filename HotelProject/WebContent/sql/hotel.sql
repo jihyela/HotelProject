@@ -1,4 +1,4 @@
--- È¸¿øÁ¤º¸ Å×ÀÌºí
+-- íšŒì›ì •ë³´ í…Œì´ë¸”
 create table customer(
    id varchar2(100) primary key,
    password varchar2(100) not null,
@@ -6,7 +6,7 @@ create table customer(
    tel number not null
 );
 drop table hotel;
--- °´½ÇÁ¤º¸ Å×ÀÌºí
+-- ê°ì‹¤ì •ë³´ í…Œì´ë¸”
 create table hotel(
    hotel_no number primary key,
    price number not null,
@@ -14,7 +14,7 @@ create table hotel(
 );
 
 
--- ¿¹¾àÁ¤º¸ Å×ÀÌºí
+-- ì˜ˆì•½ì •ë³´ í…Œì´ë¸”
 create table booking(
    book_no number primary key,
    hotel_no number not null,
@@ -24,10 +24,10 @@ create table booking(
    constraint fk_hotel foreign key(hotel_no) references hotel(hotel_no),
    constraint fk_customer foreign key(id) references customer(id)
 );
--- ¿¹¾àÁ¤º¸ ½ÃÄö½º
+-- ì˜ˆì•½ì •ë³´ ì‹œí€€ìŠ¤
 create sequence booking_seq;
 
--- °´½Ç »çÁøÁ¤º¸ Å×ÀÌºí
+-- ê°ì‹¤ ì‚¬ì§„ì •ë³´ í…Œì´ë¸”
 create table picture(
    picture_no number primary key,
    hotel_no number not null,

@@ -10,7 +10,7 @@ create table hotel(
    price number not null,
    info clob not null
 );
-
+  
 create sequence hotel_seq;
 
 create table booking(

@@ -9,6 +9,7 @@
 </head>
 <body>
 	<%
+		
 		request.setCharacterEncoding("utf-8");
 		Calendar cal = Calendar.getInstance();
 		int nowYear = cal.get(Calendar.YEAR);

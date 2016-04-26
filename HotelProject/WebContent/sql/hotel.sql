@@ -16,7 +16,7 @@ create sequence hotel_seq;
 create table booking(
    book_no number primary key,
    hotel_no number not null,
-   id varchar2(100) not null,
+   id varchar2(100) not null,   
    startdate date not null,
    enddate date not null,
    constraint fk_hotel foreign key(hotel_no) references hotel(hotel_no),

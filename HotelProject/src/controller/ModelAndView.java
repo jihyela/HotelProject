@@ -1,7 +1,7 @@
 package controller;
 
 import java.util.HashMap;
-//MAV
+//MAV  
 public class ModelAndView {
 	private String viewName;
 	private HashMap<String,Object> map=new HashMap<String,Object>();

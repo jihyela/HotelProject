@@ -27,5 +27,5 @@ create table picture(
 	picture_no number primary key,
 	hotel_no number not null,
 	name varchar2(100) not null,
-	constraint fk_hotel foreign key(hotel_no) references hotel(hotel_no)
+	constraint fk_picture foreign key(hotel_no) references hotel(hotel_no)
 );

@@ -30,3 +30,4 @@ create table picture(
 	constraint fk_picture foreign key(hotel_no) references hotel(hotel_no)
 );
 create sequence picture_seq;
+123

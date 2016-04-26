@@ -5,6 +5,6 @@ public class NoticeDAO {
 	private DataSource dataSource;
 	private BoardDAO(){
 		dataSource = data   
-	}
+	} 
 	*/
 }

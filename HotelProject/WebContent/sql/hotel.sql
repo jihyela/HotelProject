@@ -1,12 +1,19 @@
--- È¸¿øÁ¤º¸ Å×ÀÌºí
+-- íšŒì›ì •ë³´ í…Œì´ë¸”
 create table customer(
    id varchar2(100) primary key,
+   name varchar2(100) not null,
    password varchar2(100) not null,
    email varchar2(100) not null,
    tel number not null
 );
+
+insert into customer(id, name, password, email, tel) values ('jihye', 'ë¼ì§€í˜œ', '1234', 'lajihye93@naver.com', '01089000843');
+
+select name from customer where id='jihye' and password='1234';
+
+drop table customer;
 drop table hotel;
--- °´½ÇÁ¤º¸ Å×ÀÌºí
+-- ê°ì‹¤ì •ë³´ í…Œì´ë¸”
 create table hotel(
    hotel_no number primary key,
    price number not null,
@@ -14,7 +21,7 @@ create table hotel(
 );
 
 
--- ¿¹¾àÁ¤º¸ Å×ÀÌºí
+-- ì˜ˆì•½ì •ë³´ í…Œì´ë¸”
 create table booking(
    book_no number primary key,
    hotel_no number not null,
@@ -24,10 +31,10 @@ create table booking(
    constraint fk_hotel foreign key(hotel_no) references hotel(hotel_no),
    constraint fk_customer foreign key(id) references customer(id)
 );
--- ¿¹¾àÁ¤º¸ ½ÃÄö½º
+-- ì˜ˆì•½ì •ë³´ ì‹œí€€ìŠ¤
 create sequence booking_seq;
 
--- °´½Ç »çÁøÁ¤º¸ Å×ÀÌºí
+-- ê°ì‹¤ ì‚¬ì§„ì •ë³´ í…Œì´ë¸”
 create table picture(
    picture_no number primary key,
    hotel_no number not null,
@@ -35,3 +42,25 @@ create table picture(
    constraint fk_picture foreign key(hotel_no) references hotel(hotel_no)
 );
 create sequence picture_seq;
+
+
+create table qna(
+   qna_no number primary key,
+   title varchar2(100) not null,
+      content clob not null,
+      time_posted date not null,
+      hits number default 0,
+      id varchar2(100) not null,
+      constraint fk_qna foreign key(id) references customer(id)
+);
+create sequence qna_seq;
+create table notice(
+   notice_no number primary key,
+   title varchar2(100) not null,
+      content clob not null,
+      time_posted date not null,
+      hits number default 0,
+      id varchar2(100) not null,
+      constraint fk_notice foreign key(id) references customer(id)
+);
+create sequence notice_seq;

@@ -3,19 +3,22 @@ package model;
 public class CustomerVO {
 	private String id;
 	private String password;
+	private String name;
 	private String email;
-	private String phone;
+	private String tel;
 	
 	public CustomerVO() {
 		super();
 	}
 
-	public CustomerVO(String id, String password, String email, String phone) {
+	public CustomerVO(String id, String password, String name, String email,
+			String tel) {
 		super();
 		this.id = id;
 		this.password = password;
+		this.name = name;
 		this.email = email;
-		this.phone = phone;
+		this.tel = tel;
 	}
 
 	public String getId() {
@@ -34,6 +37,14 @@ public class CustomerVO {
 		this.password = password;
 	}
 
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -42,17 +53,19 @@ public class CustomerVO {
 		this.email = email;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getTel() {
+		return tel;
 	}
 
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setTel(String tel) {
+		this.tel = tel;
 	}
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", password=" + password + ", email="
-				+ email + ", phone=" + phone + "]";
+		return "CustomerVO [id=" + id + ", password=" + password + ", name="
+				+ name + ", email=" + email + ", tel=" + tel + "]";
 	}
+	
+	
 }
